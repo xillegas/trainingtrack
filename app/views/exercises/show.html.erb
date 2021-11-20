@@ -1,0 +1,9 @@
+<h1>Exercises#show</h1>
+<p>Find me in app/views/exercises/show.html.erb</p>
+
+<h2><%= @exercise.name %></h2>
+<p>
+<%= link_to 'Ver Grupos musculares', exercise_jobs_path(@exercise) %>
+<br>
+<%= link_to 'Añadir grupos musculares de trabajo', new_exercise_job_path(@exercise) %>
+</p>

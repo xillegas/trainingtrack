@@ -1,3 +1,19 @@
 Rails.application.routes.draw do
+  # get 'jobs/index'
+  # get 'jobs/new'
+  # get 'jobs/create'
+  # get 'jobs/edit'
+  # get 'jobs/update'
+  # get 'jobs/destroy'
+  # get 'exercises/index'
+  # get 'exercises/show'
+  # get 'exercises/new'
+  # get 'exercises/create'
+  # get 'exercises/edit'
+  # get 'exercises/update'
+  # get 'exercises/destroy'
+  resources :exercises do
+    resources :jobs
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -1,0 +1,8 @@
+<h1>Jobs#index</h1>
+<p>Find me in app/views/jobs/index.html.erb</p>
+<h2><%= @jobs.first.exercise.name %></h2>
+<ul>
+  <% @jobs.each do |job| %>
+    <li><%= job.muscle.name %></li>
+  <% end %>
+</ul>

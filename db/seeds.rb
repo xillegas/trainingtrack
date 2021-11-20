@@ -5,13 +5,29 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Seeds"
 
+print "\rDestruyendo conuco %1..."
+Job.destroy_all
+print "\rDestruyendo conuco %2..."
+Muscle.destroy_all
+print "\rDestruyendo conuco %3..."
+Group.destroy_all
+print "\rDestruyendo conuco %4..."
+Exercise.destroy_all
+
+ActiveRecord::Base.connection.reset_pk_sequence!("jobs")
+ActiveRecord::Base.connection.reset_pk_sequence!("muscles")
+ActiveRecord::Base.connection.reset_pk_sequence!("exercises")
+ActiveRecord::Base.connection.reset_pk_sequence!("groups")
+
+print "\rCreando Cuerpos    %9..."
 pierna =  Group.create(name:"Piernas")
 espalda = Group.create(name:"Espalda")
 core =    Group.create(name:"Core")
 brazos =  Group.create(name:"Brazos")
 superior = Group.create(name:"Superior")
-
+print "\rCreando Músculos   %10..."
 Muscle.create(name:"Pectorales", group: superior)
 Muscle.create(name:"Cuello", group: superior)
 Muscle.create(name:"Deltoides", group: superior)
@@ -20,6 +36,7 @@ Muscle.create(name:"Biceps", group: brazos)
 Muscle.create(name:"Antebrazos", group: brazos)
 Muscle.create(name:"Abdominales", group: core)
 Muscle.create(name:"Obliques", group: core)
+print "\rCreando Músculos   %15..."
 Muscle.create(name:"Intercostales", group: core)
 Muscle.create(name:"Trapecio", group: espalda)
 Muscle.create(name:"Lats", group: espalda)
@@ -27,4 +44,29 @@ Muscle.create(name:"Espalda baja", group: espalda)
 Muscle.create(name:"Quadriceps", group: pierna)
 Muscle.create(name:"Gluteos", group: pierna)
 Muscle.create(name:"Muslo anterior", group: pierna)
+print "\rCreando Músculos   %20..."
 Muscle.create(name:"Canilla", group: pierna)
+
+#################################
+print "\rCreando Ejercicios %22..."
+push_up = Exercise.create(name:"Push up")
+Job.create(exercise: push_up, muscle: Muscle.find_by(name: "Pectorales"), intensity: 33)
+Job.create(exercise: push_up, muscle: Muscle.find_by(name: "Triceps"), intensity: 30)
+Job.create(exercise: push_up, muscle: Muscle.find_by(name: "Deltoides"), intensity: 20)
+Job.create(exercise: push_up, muscle: Muscle.find_by(name: "Abdominales"), intensity: 17)
+print "\rCreando Ejercicios %44..."
+pull_up = Exercise.create(name:"Pull up")
+Job.create(exercise: pull_up, muscle: Muscle.find_by(name: "Lats"), intensity: 40)
+Job.create(exercise: pull_up, muscle: Muscle.find_by(name: "Biceps"), intensity: 40)
+Job.create(exercise: pull_up, muscle: Muscle.find_by(name: "Antebrazos"), intensity: 20)
+print "\rCreando Ejercicios %66..."
+sits = Exercise.create(name:"Sentadillas")
+Job.create(exercise: sits, muscle: Muscle.find_by(name:"Abdominales"), intensity: 90)
+Job.create(exercise: sits, muscle: Muscle.find_by(name:"Obliques"), intensity: 10)
+print "\rCreando Ejercicios %88..."
+m_press = Exercise.create(name:"Military Press")
+Job.create(exercise: m_press, muscle: Muscle.find_by(name:"Deltoides"), intensity: 30)
+Job.create(exercise: m_press, muscle: Muscle.find_by(name:"Triceps"), intensity: 70)
+print "\rCreando Ejercicios %100..."
+puts ""
+puts "Semillas germinando..."
