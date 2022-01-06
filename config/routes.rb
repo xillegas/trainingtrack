@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   # get 'exercises/edit'
   # get 'exercises/update'
   # get 'exercises/destroy'
+  root to: "pages#home"
   resources :exercises do
     resources :jobs
   end

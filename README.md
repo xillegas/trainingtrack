@@ -23,4 +23,9 @@ Es una tabla para agrupar los *músculos* por grupos musculares.
 ## Controladores
 En una primera versión útil, la aplicación mostraría un dashboard para mostrar el trabajo realizado en cada grupo muscular (o cada músculo) con el fin de trazar un entrenamiento personalizado en función del músculo que se desee entrenar. Si se desea entrenar todos los músculos por igual puede usarse para aumentar el esfuerzo en ése músculo que tenga menor esfuerzo haciendo uno o varios ejercicios enfocados en el mismo.
 
+## Prototipo
+En construcción, disponible en [Figma](https://www.figma.com/file/tcxY34plnnlplSLzDGk5jp/TrainingTrack).
+
+---
+
 <small>Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.</small>
