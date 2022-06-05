@@ -29,7 +29,7 @@ class ExercisesController < ApplicationController
 
   private
 
-  def restaurant_params
+  def exercise_params
     params.require(:exercise).permit(:name)
   end
 end

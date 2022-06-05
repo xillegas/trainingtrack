@@ -15,6 +15,7 @@ print "\rDestruyendo conuco %3..."
 Group.destroy_all
 print "\rDestruyendo conuco %4..."
 Exercise.destroy_all
+Work.destroy_all
 
 ActiveRecord::Base.connection.reset_pk_sequence!("jobs")
 ActiveRecord::Base.connection.reset_pk_sequence!("muscles")
@@ -49,24 +50,28 @@ Muscle.create(name:"Canilla", group: pierna)
 
 #################################
 print "\rCreando Ejercicios %22..."
-push_up = Exercise.create(name:"Push up")
+push_up = Exercise.create(name:"Push up", difficulty: 1)
 Job.create(exercise: push_up, muscle: Muscle.find_by(name: "Pectorales"), intensity: 33)
 Job.create(exercise: push_up, muscle: Muscle.find_by(name: "Triceps"), intensity: 30)
 Job.create(exercise: push_up, muscle: Muscle.find_by(name: "Deltoides"), intensity: 20)
 Job.create(exercise: push_up, muscle: Muscle.find_by(name: "Abdominales"), intensity: 17)
 print "\rCreando Ejercicios %44..."
-pull_up = Exercise.create(name:"Pull up")
+pull_up = Exercise.create(name:"Pull up", difficulty: 1)
 Job.create(exercise: pull_up, muscle: Muscle.find_by(name: "Lats"), intensity: 40)
 Job.create(exercise: pull_up, muscle: Muscle.find_by(name: "Biceps"), intensity: 40)
 Job.create(exercise: pull_up, muscle: Muscle.find_by(name: "Antebrazos"), intensity: 20)
 print "\rCreando Ejercicios %66..."
-sits = Exercise.create(name:"Sentadillas")
+sits = Exercise.create(name:"Sentadillas", difficulty: 1)
 Job.create(exercise: sits, muscle: Muscle.find_by(name:"Abdominales"), intensity: 90)
 Job.create(exercise: sits, muscle: Muscle.find_by(name:"Obliques"), intensity: 10)
 print "\rCreando Ejercicios %88..."
-m_press = Exercise.create(name:"Military Press")
+m_press = Exercise.create(name:"Military Press", difficulty: 1.5)
 Job.create(exercise: m_press, muscle: Muscle.find_by(name:"Deltoides"), intensity: 30)
 Job.create(exercise: m_press, muscle: Muscle.find_by(name:"Triceps"), intensity: 70)
+###
+Work.create(exercise: m_press, set: 2, rep: 2)
+Work.create(exercise: sits, set: 2, rep: 2)
+Work.create(exercise: push_up, set: 2, rep: 2)
 print "\rCreando Ejercicios %100..."
 puts ""
 puts "Semillas germinando..."
