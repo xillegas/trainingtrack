@@ -31,6 +31,6 @@ En construcción, disponible en [Figma](https://www.figma.com/file/tcxY34plnnlpl
 En fecha de junio 2022, se ha podido crear el controlador para mostrar la cantidad de puntos de esfuerzo realizado en cada grupo muscular, (campo intensity en jobs) Así que tenemos por hacer:
 - Mejorar las seeds para mostrar data de prueba útil para el desarrollo
 - Desarrollar el create de un Work (de un track, del ejercicio realizado)
-- Ir desarrollando los aspectos visuales.
+- Ir desarrollando los aspectos visuales..
 
 <small>Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.</small>
