@@ -68,10 +68,16 @@ print "\rCreando Ejercicios %88..."
 m_press = Exercise.create(name:"Military Press", difficulty: 1.5)
 Job.create(exercise: m_press, muscle: Muscle.find_by(name:"Deltoides"), intensity: 30)
 Job.create(exercise: m_press, muscle: Muscle.find_by(name:"Triceps"), intensity: 70)
+print "\rCreando Ejercicios %99..."
+bar = Exercise.create(name:"Barra sin peso", difficulty: 0.5)
+Job.create(exercise: bar, muscle: Muscle.find_by(name:"Biceps"), intensity:90)
+Job.create(exercise: bar, muscle: Muscle.find_by(name:"Deltoides"), intensity:10)
 ###
 Work.create(exercise: m_press, set: 2, rep: 2)
 Work.create(exercise: sits, set: 2, rep: 2)
 Work.create(exercise: push_up, set: 2, rep: 2)
+Work.create(exercise: pull_up, set: 3, rep: 3)
+Work.create(exercise: bar, set: 3, rep: 30)
 print "\rCreando Ejercicios %100..."
 puts ""
 puts "Semillas germinando..."
