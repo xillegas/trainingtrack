@@ -33,4 +33,6 @@ En fecha de junio 2022, se ha podido crear el controlador para mostrar la cantid
 - Desarrollar el create de un Work (de un track, del ejercicio realizado)
 - Ir desarrollando los aspectos visuales..
 
+En fecha de octubre 2022, instalé Rails en mi nueva laptop, la bitácora de la configuración está en [Configuraciones Rails](./Configuraciones%20Rails.md)
+
 <small>Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.</small>

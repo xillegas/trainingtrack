@@ -14,8 +14,8 @@ Muscle.destroy_all
 print "\rDestruyendo conuco %3..."
 Group.destroy_all
 print "\rDestruyendo conuco %4..."
-Exercise.destroy_all
 Work.destroy_all
+Exercise.destroy_all
 
 ActiveRecord::Base.connection.reset_pk_sequence!("jobs")
 ActiveRecord::Base.connection.reset_pk_sequence!("muscles")
