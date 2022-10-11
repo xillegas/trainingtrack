@@ -1,22 +1,13 @@
-<div class="banner">
-  <h1>Training track</h1>
-  <p>Rastrea el esfuerzo de cada ejercicio diariamente y su aporte a cada músculo.</p>
-  <%= link_to 'Comenzar', exercises_path %>
-</div>
 <div class="container">
-  <div class="card">
-    <div class="card-body">
-    Ejercicios
-    </div>
+  <div class="titulo-box">
+    <span class="titulo-texto"><span class="titulo-texto-color-azul">Tr</span>aining</span>
+    <span class="titulo-texto"><span class="titulo-texto-color-verde">Tr</span>ack</span>
   </div>
-  <div class="card">
-  <div class="card-body">
-    Entrenamiento
+</div>
+<div class="contenedor-principal">
+  <div class="contenedor-botones">
+    <%= link_to 'Comenzar' , exercises_path, :class=> 'boton-primario' %>
+    <%= link_to 'Ver mi Track' , exercises_path, :class=> 'boton-secundario' %>
   </div>
-  </div>
-  <div class="card">
-  <div class="card-body">
-    Rendimiento
-  </div>
-  </div>
+    <p class="pie">Hecho por Alfredo Villegas</p>
 </div>

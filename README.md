@@ -35,4 +35,6 @@ En fecha de junio 2022, se ha podido crear el controlador para mostrar la cantid
 
 En fecha de octubre 2022, instalé Rails en mi nueva laptop, la bitácora de la configuración está en [Configuraciones Rails](./Configuraciones%20Rails.md)
 
+- 11/10/2022 Home page realizada según mi prototipo
+
 <small>Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.</small>

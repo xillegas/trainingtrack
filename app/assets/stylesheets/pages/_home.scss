@@ -1,4 +1,101 @@
 // Specific CSS for your home-page
-.banner {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+.titulo-box {
+  width: 182px;
+  height: 97px;
   text-align: center;
+  align-items: center;
+}
+
+.titulo-texto {
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  line-height: 41px;
+  letter-spacing: -0.05em;
+  color: #292929;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-texto-color-azul {
+  color: $color-primario-azul;
+}
+
+.titulo-texto-color-verde {
+  color: $color-secundario-verde;
+}
+
+.contenedor-principal {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 83.65%, rgba(0, 0, 0, 0.496) 100%),
+    url(background-pesas.jpeg);
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 66vh;
+}
+
+.contenedor-botones {
+  position: relative;
+  top: -66px;
+  text-align: center;
+  display: grid;
+}
+
+.boton-primario {
+  display: block;
+  background-color: $color-primario-azul;
+  color:#ffffff;
+  border-radius: 90px;
+  width: 322px;
+  margin:auto;
+  padding: 30px 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-bottom: 64px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  &:hover{
+    color: gainsboro;
+    text-decoration: none;
+  }
+}
+
+.boton-secundario {
+  display: block;
+  background-color: $color-secundario-verde;
+  border-radius: 90px;
+  color:#ffffff;
+  width: 322px;
+  margin:auto;
+  padding: 30px 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  &:hover{
+    color: gainsboro;
+    text-decoration: none;
+  }
+}
+
+.pie {
+  color: #ffffff;
+  font-style: italic;
+  padding: 10px 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  width: -webkit-fill-available;
 }
