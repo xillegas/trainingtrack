@@ -18,9 +18,15 @@ class WorksController < ApplicationController
   end
 
   def new
+    @work = Work.new
+    @exercise = Exercise.find(params[:exercise_id])
   end
 
   def create
+    @work = Work.new(work_params)
+    @work.save
+
+    redirect_to works_path(@work)
   end
 
   def edit
@@ -30,5 +36,11 @@ class WorksController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def works_params
+    params.require(:works).permit(:name)
   end
 end

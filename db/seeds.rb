@@ -50,26 +50,35 @@ Muscle.create(name:"Canilla", group: pierna)
 
 #################################
 print "\rCreando Ejercicios %22..."
-push_up = Exercise.create(name:"Push up", difficulty: 1)
+about = "Es la clásica flexión de pecho, tumbado en el piso boca abajo se flexionan
+        los brazos para levantarse manteniendo el cuerpo recto."
+push_up = Exercise.create(name:"Push up", description: about, difficulty: 1)
 Job.create(exercise: push_up, muscle: Muscle.find_by(name: "Pectorales"), intensity: 33)
 Job.create(exercise: push_up, muscle: Muscle.find_by(name: "Triceps"), intensity: 30)
 Job.create(exercise: push_up, muscle: Muscle.find_by(name: "Deltoides"), intensity: 20)
 Job.create(exercise: push_up, muscle: Muscle.find_by(name: "Abdominales"), intensity: 17)
 print "\rCreando Ejercicios %44..."
-pull_up = Exercise.create(name:"Pull up", difficulty: 1)
+about = "Es la clásica barra, te tomas de una barra alta y levantas el peso de tu cuerpo."
+pull_up = Exercise.create(name:"Pull up", description: about, difficulty: 3)
 Job.create(exercise: pull_up, muscle: Muscle.find_by(name: "Lats"), intensity: 40)
 Job.create(exercise: pull_up, muscle: Muscle.find_by(name: "Biceps"), intensity: 40)
 Job.create(exercise: pull_up, muscle: Muscle.find_by(name: "Antebrazos"), intensity: 20)
 print "\rCreando Ejercicios %66..."
-sits = Exercise.create(name:"Sentadillas", difficulty: 1)
-Job.create(exercise: sits, muscle: Muscle.find_by(name:"Abdominales"), intensity: 90)
+about = "Consiste en agachar el cuerpo manteniendo la espalda erguida, solo flexionando
+        las rodillas."
+sits = Exercise.create(name:"Sentadillas", description: about, difficulty: 2)
+Job.create(exercise: sits, muscle: Muscle.find_by(name:"Abdominales"), intensity: 20)
 Job.create(exercise: sits, muscle: Muscle.find_by(name:"Obliques"), intensity: 10)
+Job.create(exercise: sits, muscle: Muscle.find_by(name:"Quadriceps"), intensity: 70)
 print "\rCreando Ejercicios %88..."
-m_press = Exercise.create(name:"Military Press", difficulty: 1.5)
+about = "Es un ejercicio difícil, la versión hardcore del push up."
+m_press = Exercise.create(name:"Military Press", description: about, difficulty: 3)
 Job.create(exercise: m_press, muscle: Muscle.find_by(name:"Deltoides"), intensity: 30)
 Job.create(exercise: m_press, muscle: Muscle.find_by(name:"Triceps"), intensity: 70)
 print "\rCreando Ejercicios %99..."
-bar = Exercise.create(name:"Barra sin peso", difficulty: 0.5)
+about = "Levantar la barra con peso muerto, es decir, sin pesas, solo el peso de la barra.
+        Esto ayuda a entrenar el performance del ejercicio."
+bar = Exercise.create(name:"Barra sin peso", description: about,  difficulty: 1)
 Job.create(exercise: bar, muscle: Muscle.find_by(name:"Biceps"), intensity:90)
 Job.create(exercise: bar, muscle: Muscle.find_by(name:"Deltoides"), intensity:10)
 ###

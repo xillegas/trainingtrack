@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   get 'works/index'
-  get 'works/show'
-  get 'works/new'
-  get 'works/create'
-  get 'works/edit'
-  get 'works/update'
-  get 'works/destroy'
+  # get 'works/show'
+  # get 'works/new'
+  # get 'works/create'
+  # get 'works/edit'
+  # get 'works/update'
+  # get 'works/destroy'
   # get 'jobs/index'
   # get 'jobs/new'
   # get 'jobs/create'
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   resources :exercises do
     resources :jobs
-    #resources :works
+    resources :works, except: [:index]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -1,2 +1,43 @@
-<h1>Works#new</h1>
-<p>Find me in app/views/works/new.html.erb</p>
+<div class="container centrar-flex p-3">
+<h1>Ejercicio elegido</h1>
+</div>
+<div class="lista-ejercicios">
+<div class="caja-ejercicio">
+      <div class="titulo-caja">
+        <h3><%= @exercise.name %></h3>
+        <span class="circulo"><%= @exercise.difficulty %></span>
+      </div>
+      <p><%= @exercise.description %></p>
+      <div class="grupos-musculares">
+        <% piernas = "piernas-false" %>
+        <% espalda = "espalda-false" %>
+        <% core = "core-false" %>
+        <% brazos = "brazos-false" %>
+        <% superior = "superior-false" %>
+        <% @exercise.jobs.each do |effort| %>
+          <% case effort.muscle.group.name %>
+          <% when "Piernas" %>
+            <% piernas = "piernas-true" %>
+          <% when "Espalda" %>
+            <% espalda = "espalda-true" %>
+          <% when "Core" %>
+            <% core = "core-true" %>
+          <% when "Brazos" %>
+            <% brazos = "brazos-true" %>
+          <% when "Superior" %>
+            <% superior = "superior-true" %>
+          <% end %>
+        <% end %>
+        <div class="grupo-color <%= piernas %>">Piernas</div>
+        <div class="grupo-color <%= espalda %>">Espalda</div>
+        <div class="grupo-color <%= core %>">Core</div>
+        <div class="grupo-color <%= brazos %>">Brazos</div>
+        <div class="grupo-color <%= superior %>">Superior</div>
+      </div>
+    </div>
+    </div>
+<div class="container centrar-flex p-3">
+<h2>Sets</h2>
+<h2>Reps</h2>
+<span class="boton-primario">Hacer Track!</span>
+</div>
